@@ -143,3 +143,31 @@ cd server
 npm start
 Open in Browser
 Visit: http://localhost:3000
+
+## 🤝 How to Contribute
+Want to improve this project? Here’s how:
+
+Fork the Repository
+
+Create a New Branch (git checkout -b feature/new-feature)
+
+Commit Changes (git commit -m "Add new feature")
+
+Push to Branch (git push origin feature/new-feature)
+
+Open a Pull Request
+
+## 📜 License
+This project is open-source. Check the LICENSE file for details.
+
+## 📬 Contact
+GitHub: @zakiraziz
+
+Email: (Check GitHub profile for contact info)
+
+## 🔍 Final Notes
+This Trello clone is a great learning project for fullstack development, covering:
+✅ Frontend (Next.js, React, TypeScript)
+✅ Backend (Node.js, Express, MongoDB)
+✅ Authentication (NextAuth, JWT)
+✅ Real-Time Features (Drag-and-Drop, Live Updates)
