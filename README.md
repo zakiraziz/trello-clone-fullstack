@@ -81,3 +81,65 @@ Add Multiple Lists (e.g., "To Do," "In Progress," "Done")
 Drag-and-Drop Cards (Reorder tasks between lists)
 
 Edit Card Details (Title, description, labels, due dates)
+## 🔄 Real-Time Updates
+Live Changes (If multiple users edit the same board, updates appear instantly)
+
+WebSocket or Polling (Likely used for real-time sync)
+
+## 🎨 UI/UX Enhancements
+Responsive Design (Works on mobile, tablet, and desktop)
+
+Dark/Light Mode (If implemented)
+
+Animations & Smooth Transitions (Better user experience)
+
+## ⚙️ Installation & Setup
+### Prerequisites
+Node.js (v16+)
+
+npm / yarn (Package manager)
+
+MongoDB Atlas (Cloud DB) or Local MongoDB
+
+Steps to Run Locally
+Clone the Repository
+
+bash
+git clone https://github.com/zakiraziz/trello-clone-fullstack.git
+cd trello-clone-fullstack
+Install Dependencies
+
+bash
+# Frontend
+npm install
+
+# Backend
+cd server
+npm install
+Set Up Environment Variables
+
+Create a .env file in the root (frontend) and server/.env (backend).
+
+Example variables:
+
+env
+# Frontend (.env)
+NEXT_PUBLIC_API_URL=http://localhost:5000
+NEXT_PUBLIC_GOOGLE_CLIENT_ID=your_google_client_id
+
+# Backend (server/.env)
+MONGO_URI=mongodb+srv://user:password@cluster.mongodb.net/dbname
+JWT_SECRET=your_jwt_secret_key
+Run the Application
+
+Frontend (Next.js):
+
+bash
+npm run dev
+Backend (Express):
+
+bash
+cd server
+npm start
+Open in Browser
+Visit: http://localhost:3000
