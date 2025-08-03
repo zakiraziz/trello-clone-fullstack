@@ -1,6 +1,8 @@
 # Trello Clone - Fullstack Project
 ## 🚀 Project Overview
-This is a fullstack Trello clone built with modern web technologies, designed to replicate the core functionality of Trello, a popular project management tool. The application allows users to:
+
+This is a fullstack Trello clone built with modern web technologies, designed to replicate the core functionality of Trello, a popular project management tool. The application 
+allows users to:
 
 Create, edit, and organize boards (for different projects)
 
@@ -13,18 +15,69 @@ Collaborate with team members (if multi-user features are implemented)
 The project follows best practices in frontend and backend development, ensuring a scalable, responsive, and user-friendly experience.
 
 ## 🌐 Live Demo
+
 You can check out the live version of this project here:
+
 🔗 Trello Clone Demo
 
 (Note: If the link is not working, the project might be under maintenance or moved. Check the repository for updates.)
 
 ## 🛠️ Tech Stack
+
 Frontend
+
 Technology	Purpose
+
 Next.js	React framework for server-side rendering & optimized performance
+
 TypeScript	Adds static typing for better code reliability
+
 Tailwind CSS	Utility-first CSS framework for responsive styling
+
 React Beautiful DND	Smooth drag-and-drop functionality for cards & lists
+
 React Hook Form	Efficient form handling with validation
+
 Zustand	Lightweight state management (alternative to Redux)
+
 NextAuth.js	Authentication (Google, GitHub, Email/Password, etc.)
+
+  Backend
+  
+Technology	Purpose 
+
+Node.js	JavaScript runtime for the backend
+
+Express.js	Minimalist web framework for API routing
+
+MongoDB	NoSQL database for storing boards, lists, and user data
+
+Mongoose	ODM (Object Data Modeling) for MongoDB
+
+JWT (JSON Web Tokens)	Secure user authentication
+
+### Additional Tools
+
+Vercel (Frontend Deployment)
+
+Render / Railway (Backend Hosting) (Assumed, check actual deployment)
+
+Git & GitHub (Version Control)
+
+
+## ✨ Key Features
+## 🔐 User Authentication
+Sign Up / Login (Email-Password, OAuth with Google/GitHub)
+
+Protected Routes (Unauthorized users can't access boards)
+
+Session Management (Persistent login state)
+
+## 📌 Boards, Lists & Cards
+Create & Delete Boards (Each board represents a project)
+
+Add Multiple Lists (e.g., "To Do," "In Progress," "Done")
+
+Drag-and-Drop Cards (Reorder tasks between lists)
+
+Edit Card Details (Title, description, labels, due dates)
