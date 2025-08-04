@@ -1,6 +1,37 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# dependencies
+### General ###
+*.log
+*.swp
+*.bak
+*.tmp
+*.pid
+*.pid.lock
+*~
+*.orig
+*.rej
+*.sublime-workspace
+*.sublime-project
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+### OS generated ###
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+### Node ###
+# Dependencies
 /node_modules
 /.pnp
 .pnp.*
@@ -10,32 +41,150 @@
 !.yarn/releases
 !.yarn/versions
 
-# testing
+# Build and test
 /coverage
-
-# next.js
-/.next/
-/out/
-
-# production
+/.nyc_output
+/dist
+/out
 /build
 
-# misc
-.DS_Store
-*.pem
-
-# debug
+# Debug logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
+### Next.js ###
+/.next/
+/out/
+next-env.d.ts
 
-# vercel
+### Production ###
+*.pem
+*.cert
+*.key
+
+### Environment ###
+.env*
+.env.local
+.env.development
+.env.test
+.env.production
+.env.staging
+
+### Editor ###
+.idea
+.vscode
+*.swp
+*.swo
+
+### Testing ###
+/junit.xml
+/test-results.xml
+/cypress/screenshots/
+/cypress/videos/
+
+### Python ###
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+### Ruby ###
+*.gem
+/.bundle
+/vendor/bundle
+/bin
+/lib/bundler/man/
+*.rbc
+/.config
+/InstalledFiles
+/pkg/
+/spec/reports/
+/spec/examples.txt
+/test/tmp/
+/test/version_tmp/
+/tmp/
+
+### Java ###
+*.class
+*.jar
+*.war
+*.ear
+hs_err_pid*
+/nbproject/private/
+/build/
+/target/
+
+### Go ###
+/bin/
+/pkg/
+/out/
+*.exe
+*.test
+*.prof
+
+### Rust ###
+/target/
+**/*.rs.bk
+Cargo.lock
+
+### Android ###
+*.apk
+*.ap_
+*.dex
+*.class
+bin/
+gen/
+build/
+local.properties
+*.keystore
+*.jks
+
+### iOS ###
+*.ipa
+*.xcuserstate
+*.xcworkspace
+xcuserdata/
+DerivedData/
+build/
+Pods/
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcworkspace/contents.xcworkspacedata
+
+### Vercel ###
 .vercel
 
-# typescript
+### TypeScript ###
 *.tsbuildinfo
-next-env.d.ts
+
+### Docker ###
+docker-compose.override.yml
+
+### Database ###
+*.db
+*.sqlite
+*.sqlite3
+*.dump
+
+### Visual Studio Code ###
+.history
