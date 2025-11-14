@@ -356,4 +356,148 @@ export default function DashboardPage() {
                 </div>
               ))}
 
+              <Card className="mt-4 border-2 border-dashed border-gray-300 hover:border-blue-400 transition-colors cursor-pointer group">
+                <CardContent className="p-4 sm:p-6 flex flex-col items-center justify-center h-full min-h-[200px]">
+                  <Plus className="h-6 w-6 sm:h-8 sm:w-8 text-gray-400 group-hover:text-blue-600 mb-2" />
+                  <p className="text-sm sm:text-base text-gray-600 group-hover:text-blue-600 font-medium">
+                    Create new board
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          )}
+        </div>
+      </main>
+      {/* Filter Dialog */}
+      <Dialog open={isFilterOpen} onOpenChange={setIsFilterOpen}>
+        <DialogContent className="w-[95vw] max-w-[425px] mx-auto">
+          <DialogHeader>
+            <DialogTitle>Filter Boards</DialogTitle>
+            <p className="text-sm text-gray-600">
+              Filter boards by title, date, or task count.
+            </p>
+          </DialogHeader>
+          <div className="space-y-4">
+            <div className="space-y-2">
+              <Label>Search</Label>
+              <Input
+                id="search"
+                placeholder="Search board titles..."
+                onChange={(e) =>
+                  setFilters((prev) => ({ ...prev, search: e.target.value }))
+                }
+              />
+            </div>
+            <div className="space-y-2">
+              <Label>Date Range</Label>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                <div>
+                  <Label className="text-xs">Start Date</Label>
+                  <Input
+                    type="date"
+                    onChange={(e) =>
+                      setFilters((prev) => ({
+                        ...prev,
+                        dateRange: {
+                          ...prev.dateRange,
+                          start: e.target.value || null,
+                        },
+                      }))
+                    }
+                  />
+                </div>
+                <div>
+                  <Label className="text-xs">End Date</Label>
+                  <Input
+                    type="date"
+                    onChange={(e) =>
+                      setFilters((prev) => ({
+                        ...prev,
+                        dateRange: {
+                          ...prev.dateRange,
+                          end: e.target.value || null,
+                        },
+                      }))
+                    }
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="space-y-2">
+              <Label>Task Count</Label>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                <div>
+                  <Label className="text-xs">Minimum</Label>
+                  <Input
+                    type="number"
+                    min="0"
+                    placeholder="Min tasks"
+                    onChange={(e) =>
+                      setFilters((prev) => ({
+                        ...prev,
+                        taskCount: {
+                          ...prev.taskCount,
+                          min: e.target.value ? Number(e.target.value) : null,
+                        },
+                      }))
+                    }
+                  />
+                </div>
+                <div>
+                  <Label className="text-xs">Maximum</Label>
+                  <Input
+                    type="number"
+                    min="0"
+                    placeholder="Max tasks"
+                    onChange={(e) =>
+                      setFilters((prev) => ({
+                        ...prev,
+                        taskCount: {
+                          ...prev.taskCount,
+                          max: e.target.value ? Number(e.target.value) : null,
+                        },
+                      }))
+                    }
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row justify-between pt-4 space-y-2 sm:space-y-0 sm:space-x-2">
+              <Button variant="outline" onClick={clearFilters}>
+                Clear Filters
+              </Button>
+              <Button onClick={() => setIsFilterOpen(false)}>
+                Apply Filters
+              </Button>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      <Dialog open={showUpgradeDialog} onOpenChange={setShowUpgradeDialog}>
+        <DialogContent className="w-[95vw] max-w-[425px] mx-auto">
+          <DialogHeader>
+            <DialogTitle>Upgrade to Create More Boards</DialogTitle>
+            <p className="text-sm text-gray-600">
+              Free users can only create one board. Upgrade to Pro or Enterprise
+              to create unlimited boards.
+            </p>
+          </DialogHeader>
+          <div className="flex justify-end space-x-4 pt-4">
+            <Button
+              variant="outline"
+              onClick={() => setShowUpgradeDialog(false)}
+            >
+              Cancel
+            </Button>
+            <Button onClick={() => router.push("/pricing")}>View Plans</Button>
+          </div>
+        </DialogContent>
+      </Dialog>
+    </div>
+  );
+}
+
+
 
